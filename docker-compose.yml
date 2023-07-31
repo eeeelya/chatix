@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  chatix:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chatix
+    volumes:
+      - "./app:/app"
+    ports:
+      - "7000:7000"
+    restart: on-failure
